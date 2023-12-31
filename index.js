@@ -43,14 +43,20 @@ function askLevel() {
         classification = 'Prata';
     } else if (xpLevel >= 5001 && xpLevel <= 7000) {
         classification = 'Ouro';
-    } else {
-        console.log('Nível não reconhecido - escolha um valor entre 0 e 7000');
-        return askLevel();
     }
+      else if (xpLevel >= 7001 && xpLevel <= 8000) {
+            classification = 'Platina';
+    } else if (xpLevel >= 8001 && xpLevel <= 9000) {
+            classification = 'Ascendente';
+    } else if (xpLevel >= 9001 && xpLevel <= 10000) {
+            classification = 'Imortal';
+    } else if (xpLevel >= 10001) {
+            classification = 'Radiante';
+    }
+       
 
     console.log(`O Herói de nome ${heroName} está no nível de ${classification}`);
     readlineInterface.close();
   });
-}
-
-});
+}}
+);
